@@ -19,7 +19,13 @@ public class phoneBookManager {
     }
 
 
-    public void add(){}
+    public void add(){
+        //current = first
+        //while current != null
+        //current = current.next
+
+
+    }
     public void delete(){}
     public void searchEmail(){}
     public void searchName(){}
