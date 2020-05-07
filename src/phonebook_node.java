@@ -12,7 +12,8 @@ public class phonebook_node {
     //check chapter 15 slides for classes
     //ch 16 for nodes
     //code example in link list part 2, last 5 minutes
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private String phoneNumber;
     private String city;
@@ -22,8 +23,12 @@ public class phonebook_node {
         next = null;
     }
 
-    public String getName(){
-      return name;
+    public String getFirstName(){
+      return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
     }
 
     public String getEmail(){
@@ -37,10 +42,20 @@ public class phonebook_node {
     public String getCity(){
         return city;
     }
+    public void MKPHNode(String newLastName, String newFirstName, String newAddress,
+                         String newCity, String newPhone, phonebook_node newNext){
 
+        this.lastName = newLastName;
+        this.firstName = newFirstName;
+        this.email = newAddress;
+        this.city = newCity;
+        this.phoneNumber = newPhone;
+        this.next = newNext;
+    }
     public String toString(){
 
-        return "Name: " + name + "\nEmail: " + email + "\nPhone number: " + phoneNumber + "\nCity: " + city;
+        return "Name: " + firstName + lastName + "\nEmail: " + email +
+                "\nPhone number: " + phoneNumber + "\nCity: " + city;
     }
 
 
