@@ -14,7 +14,7 @@ public class phoneBookManager {
 
     private phonebook_node start;
     private int size;
-
+    private int current;
     public phoneBookManager(){ //creates an empty node
 
         start = null;
@@ -27,16 +27,20 @@ public class phoneBookManager {
         phonebook_node newBook = new phonebook_node();
         phonebook_node now = start;
         phonebook_node past = null;
-
+        private int current;
 
         if(start == null){
             start = newBook;
 
         }else{
+            current = start;
             while(current.next != null){
-                current = current.next;
                 current = first;
+                current = current.next;
+
             }
+            current.next = node;
+
         }
         System.out.println();
 
