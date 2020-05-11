@@ -19,13 +19,22 @@ public class phonebook_node {
     private String city;
     private phonebook_node next;
 
+    public phonebook_node(String newLastName, String newFirstName, String newAddress,
+                          String newCity, String newPhone, phonebook_node newNext){
+
+        this.lastName = newLastName;
+        this.firstName = newFirstName;
+        this.email = newAddress;
+        this.city = newCity;
+        this.phoneNumber = newPhone;
+        this.next = null;
+    }
     public phonebook_node() { //makes empty list
 
         next = null;
     }
 
     public String getFirstName(){
-
         return firstName;
     }
 
@@ -44,16 +53,7 @@ public class phonebook_node {
     public String getCity(){
         return city;
     }
-    public void MKPHNode(String newLastName, String newFirstName, String newAddress,
-                         String newCity, String newPhone, phonebook_node newNext){
 
-        this.lastName = newLastName;
-        this.firstName = newFirstName;
-        this.email = newAddress;
-        this.city = newCity;
-        this.phoneNumber = newPhone;
-        this.next = null;
-    }
     public String toString(){
 
         return "Name: " + firstName + lastName + "\nEmail: " + email +
