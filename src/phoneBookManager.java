@@ -25,7 +25,12 @@ public class phoneBookManager {
         //current = first
         //while current != null
         //current = current.next
+        if(start == null){
+            System.out.println("This list is empty.");
+        }else{
 
+        }
+        System.out.println();
 
     }
 
@@ -34,24 +39,39 @@ public class phoneBookManager {
     }
 
     public void searchEmail(String email){
-        boolean empty = true;
+        if(start == null){
+            System.out.println("This list is empty.");
+        }else{
+
+        }
+        System.out.println();
 
 
 
     }
 
     public void searchName(){
+        if(start == null){
+            System.out.println("This list is empty.");
+        }else{
 
+        }
+        System.out.println();
 
     }
 
     public void sort(){
+        if(start == null){
+            System.out.println("This list is empty.");
+        }else{
 
+        }
+        System.out.println();
     }
 
     public void print(){
         if(start == null){
-            System.out.println("This list is now empty.");
+            System.out.println("This list is empty.");
         }else{
 
         }

@@ -56,16 +56,17 @@ public class PhoneBookMain {
                 break;
 
             case 3://search contact
+                System.out.println("Please enter the Name to search for: ");
 
                 break;
 
             case 4://sort
-
+                System.out.println("Please enter the Name to search for: ");
                 break;
 
             case 5://prints list
                 System.out.println("Printing Phonebook.");
-                List.printlist();
+                List.print();
                 break;
 
             case 6://exit
