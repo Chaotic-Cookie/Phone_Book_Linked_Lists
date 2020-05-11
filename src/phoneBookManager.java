@@ -13,20 +13,27 @@ public class phoneBookManager {
 
 
     private phonebook_node start;
+    private int size;
 
     public phoneBookManager(){ //creates an empty node
 
         start = null;
-
+        size = 0;
     }
 
 
-    public void add(){
+    public void add(String name, String email, String phoneNumber, String city){
         //current = first
         //while current != null
         //current = current.next
+        phonebook_node newBook = new phonebook_node();
+        phonebook_node now = start;
+        phonebook_node past = null;
+
+
         if(start == null){
-            System.out.println("This list is empty.");
+            start = newBook;
+
         }else{
 
         }

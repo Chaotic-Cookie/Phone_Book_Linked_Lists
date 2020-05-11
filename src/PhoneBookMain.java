@@ -14,8 +14,9 @@ public class PhoneBookMain {
     public static void main(String[] args) throws IOException {
         Scanner book = new Scanner(System.book);
         phonebook_node List = new phonebook_node();
-        Integer menu;
 
+        Integer menu;
+        boolean finished = false;
 
         while (true) { //menu options
             System.out.println();
@@ -50,8 +51,8 @@ public class PhoneBookMain {
                 break;
 
             case 2://delete contact
-                System.out.println("Please enter Email Address: ");
-
+                System.out.println("Please enter Index number: ");
+                int delete = book.nextInt();
 
                 break;
 
