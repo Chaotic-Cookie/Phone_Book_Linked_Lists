@@ -22,10 +22,10 @@ public class phoneBookManager {
     }
 
 
-    public void add(String name, String email, String phoneNumber, String city){
+    public void add(phonebook_node node){
         //current = first
         //while current != null
-        //current = current.next
+
         phonebook_node newBook = new phonebook_node();
         phonebook_node now = start;
         phonebook_node past = null;
@@ -35,7 +35,7 @@ public class phoneBookManager {
             start = newBook;
 
         }else{
-
+            current = current.next;
         }
         System.out.println();
 
