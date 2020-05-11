@@ -15,7 +15,9 @@ public class phoneBookManager {
     private phonebook_node start;
 
     public phoneBookManager(){ //creates an empty node
+
         start = null;
+
     }
 
 
@@ -26,11 +28,36 @@ public class phoneBookManager {
 
 
     }
-    public void delete(){}
-    public void searchEmail(){}
-    public void searchName(){}
-    public void sort(){}
-    public void print(){}
+
+    public void delete(){
+
+    }
+
+    public void searchEmail(String email){
+        boolean empty = true;
+
+
+
+    }
+
+    public void searchName(){
+
+
+    }
+
+    public void sort(){
+
+    }
+
+    public void print(){
+        if(start == null){
+            System.out.println("This list is now empty.");
+        }else{
+
+        }
+        System.out.println();
+    }
+
 
 
 }

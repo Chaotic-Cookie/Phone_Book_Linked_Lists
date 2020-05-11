@@ -2,7 +2,7 @@
 * Mariam Khatib
 * Lab: Phonebook/Linked Lists
 * Spring 2020
-*
+* IDE: IntelliJ
 */
 
 public class phonebook_node {
@@ -20,11 +20,13 @@ public class phonebook_node {
     private phonebook_node next;
 
     public phonebook_node() { //makes empty list
+
         next = null;
     }
 
     public String getFirstName(){
-      return firstName;
+
+        return firstName;
     }
 
     public String getLastName(){
@@ -57,8 +59,6 @@ public class phonebook_node {
         return "Name: " + firstName + lastName + "\nEmail: " + email +
                 "\nPhone number: " + phoneNumber + "\nCity: " + city;
     }
-
-
 
 
 }
