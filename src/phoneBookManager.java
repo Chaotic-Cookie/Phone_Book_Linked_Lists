@@ -23,8 +23,6 @@ public class phoneBookManager {
 
 
     public void add(phonebook_node node){
-        //current = first
-        //while current != null
 
         phonebook_node newBook = new phonebook_node();
         phonebook_node now = start;
@@ -35,7 +33,10 @@ public class phoneBookManager {
             start = newBook;
 
         }else{
-            current = current.next;
+            while(current.next != null){
+                current = current.next;
+                current = first;
+            }
         }
         System.out.println();
 
