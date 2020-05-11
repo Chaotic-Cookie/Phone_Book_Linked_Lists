@@ -19,6 +19,7 @@ public class phonebook_node {
     private String city;
     private phonebook_node next;
 
+    //constructor
     public phonebook_node(String newLastName, String newFirstName, String newAddress,
                           String newCity, String newPhone, phonebook_node newNext){
 
@@ -30,7 +31,6 @@ public class phonebook_node {
         this.next = null;
     }
     public phonebook_node() { //makes empty list
-
         next = null;
     }
 
