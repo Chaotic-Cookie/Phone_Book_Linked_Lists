@@ -52,7 +52,7 @@ public class phonebook_node {
         this.email = newAddress;
         this.city = newCity;
         this.phoneNumber = newPhone;
-        this.next = newNext;
+        this.next = null;
     }
     public String toString(){
 
