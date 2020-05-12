@@ -55,7 +55,7 @@ public class phoneBookManager {
 
         }else{
             current = start;
-            while(current.next != null && current.next.getFirstName() != search){
+            while(current.next != null && !search){
 
                 current = current.next ;
 
