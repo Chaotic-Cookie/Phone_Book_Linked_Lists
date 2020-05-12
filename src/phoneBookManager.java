@@ -49,7 +49,7 @@ public class phoneBookManager {
 
     public void delete(phonebook_node node){
         phonebook_node current;
-        boolean search;
+        boolean search = false;
         if(start == null){
             start = node;
 
