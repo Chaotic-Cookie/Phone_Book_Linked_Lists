@@ -1,9 +1,9 @@
 /*
-* Mariam Khatib
-* Lab: Phonebook/Linked Lists
-* Spring 2020
-* IDE: IntelliJ
-*/
+ * Mariam Khatib
+ * Lab: Phonebook/Linked Lists
+ * Spring 2020
+ * IDE: IntelliJ
+ */
 
 public class phonebook_node {
 
@@ -17,11 +17,11 @@ public class phonebook_node {
     private String email;
     private String phoneNumber;
     private String city;
-    private String next;
+    protected phonebook_node next;
 
     //constructor
     public phonebook_node(String newLastName, String newFirstName, String newAddress,
-                          String newCity, String newPhone, phonebook_node newNext){
+                          String newCity, String newPhone){
 
         this.lastName = newLastName;
         this.firstName = newFirstName;
@@ -43,7 +43,7 @@ public class phonebook_node {
     }
 
     public String getEmail(){
-      return email;
+        return email;
     }
 
     public String getPhoneNumber(){
@@ -53,11 +53,6 @@ public class phonebook_node {
     public String getCity(){
         return city;
     }
-
-    public String getNext() {
-        return next;
-    }
-
 
     public String toString(){
 
