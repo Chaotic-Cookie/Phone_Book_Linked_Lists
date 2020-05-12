@@ -47,10 +47,24 @@ public class phoneBookManager {
 
     }
 
-    public void delete(){
+    public void delete(phonebook_node node){
+        phonebook_node current;
+        phonebook_node first = new phonebook_node();
+        if(start == null){
+            start = node;
 
+        }else{
+            current = start;
+            while(current.next != null){
 
-        size--;
+                current = first;
+                current = current.next.next;
+
+            }
+            current.next = node;
+            size--;
+        }
+        System.out.println();
     }
 
     public void searchEmail(String email){
