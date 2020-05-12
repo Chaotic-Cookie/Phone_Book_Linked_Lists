@@ -65,7 +65,7 @@ public class PhoneBookMain {
 
             case 4://sort
                 Collections.sort(phonebook_node);
-                System.out.println("Sorting contacts.");
+                System.out.println("This list has been sorted!");;
                 break;
 
             case 5://prints list
