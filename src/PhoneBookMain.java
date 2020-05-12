@@ -6,6 +6,8 @@
  */
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class PhoneBookMain {
@@ -62,8 +64,8 @@ public class PhoneBookMain {
                 break;
 
             case 4://sort
+                Collections.sort(phonebook_node);
                 System.out.println("Sorting contacts.");
-
                 break;
 
             case 5://prints list

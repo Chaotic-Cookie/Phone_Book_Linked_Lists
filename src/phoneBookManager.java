@@ -6,6 +6,9 @@
  */
 
 
+import java.util.Collection;
+import java.util.Collections;
+
 public class phoneBookManager {
     //needs to add an entry (name, address, city, phone #) to the end and then sort it, or alphabetically by last name
     //modify the entry, delete entries, or move them from the Bellingham to the Seattle phone book (optional)
@@ -76,6 +79,8 @@ public class phoneBookManager {
         if(start == null){
             System.out.println("This list is empty.");
         }else{
+
+            Collections.sort(phonebook_node);
 
             System.out.println("This list has been sorted!");
 
