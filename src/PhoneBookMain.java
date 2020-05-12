@@ -70,7 +70,7 @@ public class PhoneBookMain {
 
             case 5://prints list
                 System.out.println("Printing Phonebook.");
-                List.print();
+                temp.next;
                 break;
 
             case 6://exit
