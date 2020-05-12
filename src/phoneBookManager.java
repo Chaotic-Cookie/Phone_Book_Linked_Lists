@@ -13,8 +13,8 @@ public class phoneBookManager {
 
 
     private phonebook_node start;
+    private phonebook_node current;
     private int size;
-    private int current;
 
     public phoneBookManager(){ //creates an empty node
 
