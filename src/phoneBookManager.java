@@ -49,15 +49,15 @@ public class phoneBookManager {
 
     public void delete(phonebook_node node){
         phonebook_node current;
-        phonebook_node first = new phonebook_node();
+        phonebook_node search = new phonebook_node();
         if(start == null){
             start = node;
 
         }else{
             current = start;
-            while(current.next != null){
+            while(current.next != null && current.next.getFirstName() != search){
 
-                current = first;
+
                 current = current.next.next;
 
             }
