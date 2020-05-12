@@ -66,18 +66,6 @@ public class phoneBookManager {
         System.out.println();
     }
 
-    public void searchEmail(String email){
-        if(start == null){
-            System.out.println("This list is empty.");
-        }else{
-
-
-        }
-        System.out.println();
-
-
-
-    }
 
     public void searchName(){
         if(start == null){
