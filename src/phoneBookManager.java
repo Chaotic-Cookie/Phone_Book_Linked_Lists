@@ -92,7 +92,7 @@ public class phoneBookManager {
             for(int i = 0; i < size; i++){
                 System.out.print("Index #: " + (i+1) + " ");
                 System.out.println(temp);
-                temp = temp.getNext();
+                temp = temp.next;
             }
         }
         System.out.println();
