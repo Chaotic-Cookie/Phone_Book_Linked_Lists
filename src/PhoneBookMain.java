@@ -14,7 +14,7 @@ public class PhoneBookMain {
     //main has all the values
 
     public static void main(String[] args) throws IOException {
-        Scanner book = new Scanner(System.book);
+        Scanner book;
         phonebook_node List = new phonebook_node();
 
         Integer menu;
@@ -49,7 +49,6 @@ public class PhoneBookMain {
                 System.out.println("Please enter a City: ");
                 String city = book.nextLine();
 
-
                 break;
 
             case 2://delete contact
@@ -70,7 +69,7 @@ public class PhoneBookMain {
 
             case 5://prints list
                 System.out.println("Printing Phonebook.");
-                temp.next;
+                List.next;
                 break;
 
             case 6://exit

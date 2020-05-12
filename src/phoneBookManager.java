@@ -28,13 +28,14 @@ public class phoneBookManager {
     public void add(phonebook_node node){
 
         phonebook_node current;
-
+        phonebook_node first = new phonebook_node();
         if(start == null){
             start = node;
 
         }else{
             current = start;
             while(current.next != null){
+
                 current = first;
                 current = current.next;
 
@@ -80,7 +81,6 @@ public class phoneBookManager {
             System.out.println("This list is empty.");
         }else{
 
-            Collections.sort(phonebook_node);
 
             System.out.println("This list has been sorted!");
 
@@ -110,6 +110,5 @@ public class phoneBookManager {
         System.out.println(temp);
         temp = temp.next;
         */
-    }
 
-}
+}//end of manager
