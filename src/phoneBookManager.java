@@ -13,7 +13,7 @@ public class phoneBookManager {
 
 
     private phonebook_node start;
-    private phonebook_node current;
+
     private int size;
 
     public phoneBookManager(){ //creates an empty node
@@ -25,13 +25,10 @@ public class phoneBookManager {
 
     public void add(phonebook_node node){
 
-        phonebook_node newBook = new phonebook_node();
-        phonebook_node now = start;
-        phonebook_node past = null;
-
+        phonebook_node current;
 
         if(start == null){
-            start = newBook;
+            start = node;
 
         }else{
             current = start;
@@ -55,6 +52,7 @@ public class phoneBookManager {
         if(start == null){
             System.out.println("This list is empty.");
         }else{
+
 
         }
         System.out.println();
@@ -83,10 +81,16 @@ public class phoneBookManager {
     }
 
     public void print(){
+        phonebook_node temp = start;
         if(start == null){
             System.out.println("This list is empty.");
         }else{
 
+            for(int i = 0; i < size; i++){
+                System.out.print("Index: " + (i+1) + " ");
+                System.out.println(temp);
+                temp = temp.getNext();
+            }
         }
         System.out.println();
     }
