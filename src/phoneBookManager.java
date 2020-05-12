@@ -89,20 +89,27 @@ public class phoneBookManager {
     }
 
     public void print(){
-        phonebook_node temp = start;
+        phonebook_node current = null;
         if(start == null){
             System.out.println("This list is empty.");
-        }else{
 
-            for(int i = 0; i < size; i++){
-                System.out.print("Index #: " + (i+1) + " ");
-                System.out.println(temp);
-                temp = temp.next;
-            }
+        }else{
+           while(current.next != null){
+
+               current = current.next;
+
+           }
+
         }
         System.out.println();
     }
 
 
+    /* for(int i = 0; i < size; i++){
+        System.out.print("Index #: " + (i+1) + " ");
+        System.out.println(temp);
+        temp = temp.next;
+        */
+    }
 
 }
