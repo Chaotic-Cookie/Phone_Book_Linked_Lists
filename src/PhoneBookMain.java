@@ -62,7 +62,8 @@ public class PhoneBookMain {
                 break;
 
             case 4://sort
-                System.out.println("Please enter the Name to search for: ");
+                System.out.println("Sorting contacts.");
+
                 break;
 
             case 5://prints list

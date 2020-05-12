@@ -17,7 +17,7 @@ public class phonebook_node {
     private String email;
     private String phoneNumber;
     private String city;
-    private phonebook_node next;
+    private String next;
 
     //constructor
     public phonebook_node(String newLastName, String newFirstName, String newAddress,
@@ -53,6 +53,11 @@ public class phonebook_node {
     public String getCity(){
         return city;
     }
+
+    public String getNext() {
+        return next;
+    }
+
 
     public String toString(){
 

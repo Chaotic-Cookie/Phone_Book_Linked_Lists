@@ -8,12 +8,11 @@
 
 public class phoneBookManager {
     //needs to add an entry (name, address, city, phone #) to the end and then sort it, or alphabetically by last name
-    // modify the entry, delete entries, or move them from the Bellingham to the Seattle phone book (optional)
+    //modify the entry, delete entries, or move them from the Bellingham to the Seattle phone book (optional)
     //print out your list in a nice format
 
 
     private phonebook_node start;
-
     private int size;
 
     public phoneBookManager(){ //creates an empty node
@@ -38,7 +37,7 @@ public class phoneBookManager {
 
             }
             current.next = node;
-
+            size++;
         }
         System.out.println();
 
@@ -46,6 +45,8 @@ public class phoneBookManager {
 
     public void delete(){
 
+
+        size--;
     }
 
     public void searchEmail(String email){
@@ -76,6 +77,8 @@ public class phoneBookManager {
             System.out.println("This list is empty.");
         }else{
 
+            System.out.println("This list has been sorted!");
+
         }
         System.out.println();
     }
@@ -87,7 +90,7 @@ public class phoneBookManager {
         }else{
 
             for(int i = 0; i < size; i++){
-                System.out.print("Index: " + (i+1) + " ");
+                System.out.print("Index #: " + (i+1) + " ");
                 System.out.println(temp);
                 temp = temp.getNext();
             }
