@@ -73,17 +73,31 @@ public class phoneBookManager {
     }
 
 
-    public void searchName(){
-        if(start == null){
-            System.out.println("This list is empty.");
-        }else{
-            while(current.next != null && search){
-                System.out.println(" has been found!");
+    public void searchName(String to_search){
 
+        phonebook_node current;
+        boolean search = false;
+        if (start == null) {
+            System.out.println("There's nothing here, just blankness.");
+
+        } else if (start.getLastName().equalsIgnoreCase(to_search)) {
+            start = start.next;
+        } else {
+            current = start;
+            while (current.next != null && !search) {
+                if (start.getLastName().equalsIgnoreCase(to_search)) {
+                    System.out.println(current.next.getLastName() + " has been found.");
+                    current = current.next.next;
+                    search = true;
+                } else {
+                    current = current.next;
+                }
+                if (!search) {
+                    System.out.println(to_search + " could not be found.");
+                }
+                System.out.println();
             }
-
         }
-        System.out.println();
 
     }
 

@@ -63,7 +63,8 @@ public class PhoneBookMain {
 
             case 3://search contact
                 System.out.println("Please enter the Name to search for: ");
-
+                String to_search = book.nextLine();
+                Bellingham.searchName(to_search);
                 break;
 
             case 4://sort
