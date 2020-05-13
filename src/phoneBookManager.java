@@ -133,11 +133,4 @@ public class phoneBookManager {
         System.out.println();
     }
 
-
-    /* for(int i = 0; i < size; i++){
-        System.out.print("Index #: " + (i+1) + " ");
-        System.out.println(temp);
-        temp = temp.next;
-        */
-
 }//end of manager
