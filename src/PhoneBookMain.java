@@ -12,15 +12,17 @@ import java.util.Scanner;
 
 public class PhoneBookMain {
     //main has all the values
+    public static Scanner book = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        Scanner book;
-        phonebook_node List = new phonebook_node();
 
-        Integer menu;
+        phonebook_node List = new phonebook_node();
+        phoneBookManager Bellingham = new phoneBookManager();
+
+        Integer menu = 0;
         boolean finished = false;
 
-        while (true) { //menu options
+        while (menu != 6) { //menu options
             System.out.println();
             System.out.println("1. Add new contact");
             System.out.println("2. Delete contact");
@@ -29,7 +31,8 @@ public class PhoneBookMain {
             System.out.println("5. Print contacts list");
             System.out.println("6. Exit");
             System.out.print("Please select your choice: ");
-            menu = Integer.parseInt();
+            String response = book.nextLine();
+            menu = Integer.parseInt(response);
         }//end of while
 
         switch (menu) {
@@ -48,7 +51,8 @@ public class PhoneBookMain {
 
                 System.out.println("Please enter a City: ");
                 String city = book.nextLine();
-
+                phonebook_node contactNode = new phonebook_node(lastName, firstName, email, phoneNumeber, city);
+                Bellingham.add(contactNode);
                 break;
 
             case 2://delete contact
@@ -69,7 +73,7 @@ public class PhoneBookMain {
 
             case 5://prints list
                 System.out.println("Printing Phonebook.");
-                List.next;
+                Bellingham.print();
                 break;
 
             case 6://exit

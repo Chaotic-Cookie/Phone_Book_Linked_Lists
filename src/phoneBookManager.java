@@ -28,7 +28,7 @@ public class phoneBookManager {
     public void add(phonebook_node node){
 
         phonebook_node current;
-        phonebook_node first = new phonebook_node();
+
         if(start == null){
             start = node;
 
@@ -36,7 +36,6 @@ public class phoneBookManager {
             current = start;
             while(current.next != null){
 
-                current = first;
                 current = current.next;
 
             }
@@ -95,9 +94,13 @@ public class phoneBookManager {
             System.out.println("This list is empty.");
 
         }else{
+            current = start;
+            System.out.println(current.toString());
+
            while(current.next != null){
 
                current = current.next;
+               System.out.println(current.toString());
 
            }
 
