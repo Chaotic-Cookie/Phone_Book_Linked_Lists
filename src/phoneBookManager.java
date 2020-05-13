@@ -19,7 +19,6 @@ public class phoneBookManager {
     private int size;
 
     public phoneBookManager(){ //creates an empty node
-
         start = null;
         size = 0;
     }

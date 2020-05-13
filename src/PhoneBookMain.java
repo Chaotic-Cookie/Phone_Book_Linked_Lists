@@ -57,8 +57,8 @@ public class PhoneBookMain {
 
             case 2://delete contact
                 System.out.println("Please enter Index number: ");
-                int delete = book.nextInt();
-
+                //int delete = book.nextInt();
+                //alternative method? ^^^
                 break;
 
             case 3://search contact
@@ -67,8 +67,9 @@ public class PhoneBookMain {
                 break;
 
             case 4://sort
-                Collections.sort(phonebook_node);
-                System.out.println("This list has been sorted!");;
+                //Collections.sort(phonebook_node);
+                // :/ whoops guess the example is horrid
+                System.out.println("This list has been sorted!");
                 break;
 
             case 5://prints list
