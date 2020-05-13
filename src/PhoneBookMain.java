@@ -69,6 +69,7 @@ public class PhoneBookMain {
             case 4://sort
                 //Collections.sort(phonebook_node);
                 // :/ whoops guess the example is horrid
+                Bellingham.sort();
                 System.out.println("This list has been sorted!");
                 break;
 
