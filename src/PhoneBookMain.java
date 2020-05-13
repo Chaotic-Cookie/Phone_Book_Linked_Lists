@@ -56,9 +56,9 @@ public class PhoneBookMain {
                 break;
 
             case 2://delete contact
-                System.out.println("Please enter Index number: ");
-                int delete = book.nextInt();
-
+                System.out.println("Please enter Last Name: ");
+                String to_delete = book.nextLine();
+                Bellingham.delete(to_delete);
                 break;
 
             case 3://search contact

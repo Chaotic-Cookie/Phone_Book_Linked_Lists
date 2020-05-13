@@ -45,23 +45,31 @@ public class phoneBookManager {
 
     }
 
-    public void delete(phonebook_node node){
+    public void delete(String to_delete) {
         phonebook_node current;
         boolean search = false;
-        if(start == null){
-            start = node;
+        if (start == null) {
+            System.out.println("There's nothing here, just blankness.");
 
-        }else{
+        } else if (start.getLastName().equalsIgnoreCase(to_delete)) {
+            start = start.next;
+        } else {
             current = start;
-            while(current.next != null && !search){
-
-                current = current.next ;
-
+            while (current.next != null && !search) {
+                if (start.getLastName().equalsIgnoreCase(to_delete)) {
+                    System.out.println(current.next.getLastName() + " has been deleted.");
+                    current = current.next.next;
+                    search = true;
+                    size--;
+                } else {
+                    current = current.next;
+                }
+                if (!search) {
+                    System.out.println(to_delete + " could not be found.");
+                }
+                System.out.println();
             }
-            current.next = node;
-            size--;
         }
-        System.out.println();
     }
 
 
@@ -69,6 +77,10 @@ public class phoneBookManager {
         if(start == null){
             System.out.println("This list is empty.");
         }else{
+            while(current.next != null && search){
+                System.out.println(" has been found!");
+
+            }
 
         }
         System.out.println();
