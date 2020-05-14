@@ -8,11 +8,13 @@
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class PhoneBookMain {
     //main has all the values
     public static Scanner book = new Scanner(System.in);
+    private static List phonebook_node;
 
     public static void main(String[] args) throws IOException {
 
@@ -27,9 +29,8 @@ public class PhoneBookMain {
             System.out.println("1. Add new contact");
             System.out.println("2. Delete contact");
             System.out.println("3. Search contact");
-            System.out.println("4. Sort contact");
-            System.out.println("5. Print contacts list");
-            System.out.println("6. Exit");
+            System.out.println("4. Print contacts list");
+            System.out.println("5. Exit");
             System.out.print("Please select your choice: ");
             String response = book.nextLine();
             menu = Integer.parseInt(response);
@@ -67,19 +68,12 @@ public class PhoneBookMain {
                 Bellingham.searchName(to_search);
                 break;
 
-            case 4://sort
-                //Collections.sort(phonebook_node);
-                // :/ whoops guess the example is horrid
-                Bellingham.sort();
-                System.out.println("This list has been sorted!");
-                break;
-
-            case 5://prints list
+            case 4://prints list
                 System.out.println("Printing Phonebook.");
                 Bellingham.print();
                 break;
 
-            case 6://exit
+            case 5://exit
                 System.out.println("Thank you for using Yellow Pages.");
                 System.exit(0);
 

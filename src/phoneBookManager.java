@@ -20,7 +20,7 @@ public class phoneBookManager {
 
     public phoneBookManager(){ //creates an empty node
         start = null;
-        size = 0;
+
     }
 
 
@@ -32,15 +32,28 @@ public class phoneBookManager {
             start = node;
 
         }else{
+            boolean found = false;
             current = start;
-            while(current.next != null){
+            while(current.next != null && !found){
+                    if((current.getLastName().charAt(0) < node.getLastName().charAt(0) &&
+                            (node.getLastName().charAt(0) <= current.getLastName().charAt(0)))){
+                        found = true;
 
-                current = current.next;
+                    }else if(current.next == null){
+                        current.next = node;
 
+                    }else{
+                        current = current.next;
+
+                        if(current.next != null){
+                            node.next = current.next;
+                            current.next = node;
+                        }
+                    }
             }
             current.next = node;
-            size++;
         }
+
         System.out.println();
 
     }
@@ -60,7 +73,7 @@ public class phoneBookManager {
                     System.out.println(current.next.getLastName() + " has been deleted.");
                     current = current.next.next;
                     search = true;
-                    size--;
+
                 } else {
                     current = current.next;
                 }
@@ -101,17 +114,6 @@ public class phoneBookManager {
 
     }
 
-    public void sort(){
-        if(start == null){
-            System.out.println("This list is empty.");
-        }else{
-
-
-            System.out.println("This list has been sorted!");
-
-        }
-        System.out.println();
-    }
 
     public void print(){
         phonebook_node current = null;
