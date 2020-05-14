@@ -24,7 +24,7 @@ public class PhoneBookMain {
         Integer menu = 0;
         boolean finished = false;
 
-        while (menu != 6) { //menu options
+        while (menu != 5) { //menu options
             System.out.println();
             System.out.println("1. Add new contact");
             System.out.println("2. Delete contact");
