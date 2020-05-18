@@ -21,10 +21,11 @@ public class PhoneBookMain {
         phonebook_node List = new phonebook_node();
         phoneBookManager Bellingham = new phoneBookManager();
 
-        Integer menu = 0;
+        int menu = 0;
         boolean finished = false;
 
-        while (menu != 5) { //menu options
+
+        while (menu != 5 || menu < 5) { //menu options
             System.out.println();
             System.out.println("1. Add new contact");
             System.out.println("2. Delete contact");
@@ -34,6 +35,8 @@ public class PhoneBookMain {
             System.out.print("Please select your choice: ");
             String response = book.nextLine();
             menu = Integer.parseInt(response);
+            System.out.println(menu);
+            System.out.println(response);
         }//end of while
 
         switch (menu) {
