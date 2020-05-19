@@ -25,7 +25,7 @@ public class PhoneBookMain {
         boolean finished = false;
 
 
-        while (menu != 5 || menu < 5) { //menu options
+        while (menu != 5) { //menu options
             System.out.println();
             System.out.println("1. Add new contact");
             System.out.println("2. Delete contact");
@@ -37,52 +37,53 @@ public class PhoneBookMain {
             menu = Integer.parseInt(response);
             System.out.println(menu);
             System.out.println(response);
-        }//end of while
 
-        switch (menu) {
-            case 1://adds contact
-                System.out.println("Please enter First name: ");
-                String firstName = book.nextLine();
 
-                System.out.println("Please enter Last name: ");
-                String lastName = book.nextLine();
+            switch (menu) {
+                case 1://adds contact
+                    System.out.println("Please enter First name: ");
+                    String firstName = book.nextLine();
 
-                System.out.println("Please enter Email Address: ");
-                String email = book.nextLine();
+                    System.out.println("Please enter Last name: ");
+                    String lastName = book.nextLine();
 
-                System.out.println("Please enter a Phone number: ");
-                String phoneNumeber = book.nextLine();
+                    System.out.println("Please enter Email Address: ");
+                    String email = book.nextLine();
 
-                System.out.println("Please enter a City: ");
-                String city = book.nextLine();
-                phonebook_node contactNode = new phonebook_node(lastName, firstName, email, phoneNumeber, city);
-                Bellingham.add(contactNode);
-                break;
+                    System.out.println("Please enter a Phone number: ");
+                    String phoneNumeber = book.nextLine();
 
-            case 2://delete contact
-                System.out.println("Please enter Last Name: ");
-                String to_delete = book.nextLine();
-                Bellingham.delete(to_delete);
-                break;
+                    System.out.println("Please enter a City: ");
+                    String city = book.nextLine();
+                    phonebook_node contactNode = new phonebook_node(lastName, firstName, email, phoneNumeber, city);
+                    Bellingham.add(contactNode);
+                    break;
 
-            case 3://search contact
-                System.out.println("Please enter the Name to search for: ");
-                String to_search = book.nextLine();
-                Bellingham.searchName(to_search);
-                break;
+                case 2://delete contact
+                    System.out.println("Please enter Last Name: ");
+                    String to_delete = book.nextLine();
+                    Bellingham.delete(to_delete);
+                    break;
 
-            case 4://prints list
-                System.out.println("Printing Phonebook.");
-                Bellingham.print();
-                break;
+                case 3://search contact
+                    System.out.println("Please enter the Last Name to search for: ");
+                    String to_search = book.nextLine();
+                    Bellingham.searchName(to_search);
+                    break;
 
-            case 5://exit
-                System.out.println("Thank you for using Yellow Pages.");
-                System.exit(0);
+                case 4://prints list
+                    System.out.println("Printing Phonebook.");
+                    Bellingham.print();
+                    break;
 
-            default:
-                System.out.println("Invalid option! Please try again.");
-                break;
-        }//end of switch case
+                case 5://exit
+                    System.out.println("Thank you for using Yellow Pages.");
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid option! Please try again.");
+                    break;
+            }//end of switch case
+        }//end of while loop
     }//end of main
 }//end of class
