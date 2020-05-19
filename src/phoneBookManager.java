@@ -94,7 +94,7 @@ public class phoneBookManager {
             System.out.println("There's nothing here, just blankness.");
 
         } else if (start.getLastName().equalsIgnoreCase(to_search)) {
-            start = start.next;
+            System.out.println(start);
         } else {
             current = start;
             while (current.next != null && !search) {

@@ -35,7 +35,6 @@ public class PhoneBookMain {
             System.out.print("Please select your choice: ");
             String response = book.nextLine();
             menu = Integer.parseInt(response);
-            System.out.println(menu);
             System.out.println(response);
 
 

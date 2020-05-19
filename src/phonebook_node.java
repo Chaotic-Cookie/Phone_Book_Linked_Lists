@@ -21,7 +21,7 @@ public class phonebook_node {
 
     //constructor
     public phonebook_node(String newLastName, String newFirstName, String newAddress,
-                          String newCity, String newPhone){
+                          String newPhone, String newCity){
 
         this.lastName = newLastName;
         this.firstName = newFirstName;
@@ -56,8 +56,9 @@ public class phonebook_node {
 
     public String toString(){
 
-        return "Name: " + firstName + lastName + "\nEmail: " + email +
+        return "Name: " + firstName + " " + lastName + "\nEmail: " + email +
                 "\nPhone number: " + phoneNumber + "\nCity: " + city;
+
     }
 
 
